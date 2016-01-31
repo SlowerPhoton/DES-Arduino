@@ -113,11 +113,32 @@ void encrypt() {
 }
 
 void resetShift() {
-  // reset shift to {0, 0, 0}
+
   for (int i = 0; i < 3; i++) {
     shift[i] = 0;
   }
 
-  displayMess(F("reset done"));
+  displayLong("reset done");
 }
+
+void setShift() {
+
+  delay(200);
+  shift[0] = getInt(F("first shift"))%26;
+  shift[1] = getInt(F("second shift"))%26;
+  shift[2] = getInt(F("third shift"))%26;
+
+  displayLong("shift set");
+}
+
+void setRotor() {
+
+  delay(200);
+  rotor[0] = getInt(F("first rotor"))%26;
+  rotor[1] = getInt(F("second rotor"))%26;
+  rotor[2] = getInt(F("third rotor"))%26;
+
+  displayLong("rotor set");
+}
+
 

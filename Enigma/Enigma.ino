@@ -10,7 +10,8 @@ void setup() {
   lcd.begin(16, 2);
   Serial.begin(9600);
 
-  randomSeed(analogRead(0));
+//  randomSeed(analogRead(0));
+randomSeed(111);
   
   displayCommands(0);
 }

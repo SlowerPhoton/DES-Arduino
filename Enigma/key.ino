@@ -4,7 +4,7 @@
 */
 
 void generateKey() {
-  Serial.println(F("generate key started"));
+
   // for each scrambler and the reflector generate a key
   for (int scr = 0; scr < 4; scr++) {
 
@@ -56,12 +56,6 @@ void generateKey() {
       }
     }
 
-    for (int serial = 0; serial < 26; serial++) {
-      Serial.print(pairs[serial]);
-      Serial.print(" ");
-    }
-    Serial.println();
-
     // for each letter
     for (int i = 0; i < 26; i++) {
 
@@ -72,15 +66,11 @@ void generateKey() {
 
           // somehow works (no idea)
           if (j % 2 == 0) {
-            Serial.print( pairs[j + 1]);
-            Serial.print(" ");
             scramblers[scr][i] = pairs[j + 1];
             break;
           }
           //  *** POTENTIALLY INCORRECT PIECE OF CODE ***
           else {
-            Serial.print( pairs[j - 1]);
-            Serial.print(" ");
             scramblers[scr][i] = pairs[j - 1];
             break;
           }
@@ -88,13 +78,11 @@ void generateKey() {
         }
       }
     }
-    Serial.println();
 
   }
 
   // key was set
   keySet = true;
 
-  displayMess(F("key generated"));
-  Serial.println(F("escaped generateKey"));
+  displayLong("key generated");
 }

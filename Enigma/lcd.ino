@@ -211,3 +211,48 @@ void getOpenText() {
   openText[i] = NULL;
 }
 
+int getInt(String mess) {
+
+  int input;
+  int num = 0;
+  int last = 0;
+
+  do {
+    delay(200);
+    input = read_LCD_buttons();
+
+    switch (input) {
+      case btnNONE:
+        continue;
+      case btnUP:
+        last = 1;
+        num += last;
+        break;
+      case btnRIGHT:
+        last = 5;
+        num += last;
+        break;
+      case btnDOWN:
+        last = 10;
+        num += last;
+        break;
+      case btnLEFT:
+        num -= last;
+        last = 0;
+        break;
+      case btnSELECT:
+        break;
+    }
+
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print(mess);
+    lcd.setCursor(0, 1);
+    lcd.print(num);
+
+  }
+  while (input != btnSELECT);
+
+  return num;
+}
+
