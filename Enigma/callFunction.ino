@@ -24,6 +24,9 @@ void callFunction() {
     case 5:
       setRotor();
       break;
+    case 6:
+      changeSeed();
+      break;
     default:
       break;
   }

@@ -5,7 +5,7 @@
 
 #include <avr/pgmspace.h>
 
-#define NUMBER_OF_COMMANDS 6
+#define NUMBER_OF_COMMANDS 7
 
 #define btnRIGHT  0
 #define btnUP     1
@@ -24,7 +24,8 @@ void displayCommands(int fromPosition) {
     "reset shift",
     "print shift",
     "set shift",
-    "set rotor"
+    "set rotor",
+    "change seed"
   };
 
   lcd.clear();

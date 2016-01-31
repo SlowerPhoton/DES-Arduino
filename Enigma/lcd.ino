@@ -217,6 +217,12 @@ int getInt(String mess) {
   int num = 0;
   int last = 0;
 
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print(mess);
+  lcd.setCursor(0, 1);
+  lcd.print(num);
+
   do {
     delay(200);
     input = read_LCD_buttons();

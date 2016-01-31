@@ -141,4 +141,13 @@ void setRotor() {
   displayLong("rotor set");
 }
 
+void changeSeed(){
+  
+  int newSeed = getInt(F("new random seed")); 
+  randomSeed(newSeed);
+
+  displayLong("seed updated");
+  
+}
+
 

@@ -10,16 +10,15 @@ void setup() {
   lcd.begin(16, 2);
   Serial.begin(9600);
 
-//  randomSeed(analogRead(0));
-randomSeed(111);
-  
+  randomSeed(analogRead(0));
+
   displayCommands(0);
 }
 
 void loop() {
-  
+
   if (getInput())
-    displayCommands(lcdRow);  
+    displayCommands(lcdRow);
   delay(200);
-  
+
 }
