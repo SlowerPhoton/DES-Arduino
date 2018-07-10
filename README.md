@@ -5,7 +5,7 @@ Minimalist implementation of the DES algorithm. In this project I trade speed fo
 </p>
 
 <p>
-User can control the application by interacting with the main menu using buttons on his LCD display. 
+User can control the application by interacting with the main menu using buttons on the LCD display. 
 </p>
 
 <h1> Enigma cipher for Arduino </h1>
